@@ -19,6 +19,28 @@ RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
 VERSION = "1.0"
 
+MOCK = """<div class="stage" role="img" aria-label="Illustration of the MaPC library: a sidebar of stores and a grid of game covers with a Play button">
+<div class="mock">
+<div class="mock-bar"><i></i><i></i><i></i></div>
+<div class="mock-body">
+<div class="mock-side">
+<span class="on">Home</span><span>All Games</span><span>Installed</span>
+<b>Stores</b><span>Steam</span><span>Epic Games</span><span>GOG</span>
+<b>Activity</b><span>Downloads</span><span>Playtime</span>
+</div>
+<div class="mock-main">
+<div class="mock-title">Ready to Play</div>
+<div class="mock-sub">Your installed games, most recent first</div>
+<div class="mock-grid">
+<div class="cover c1"><span class="play">Play</span></div><div class="cover c2"></div><div class="cover c3"></div><div class="cover c4"></div>
+<div class="cover c5"></div><div class="cover c6"></div><div class="cover c7"></div><div class="cover c8"></div>
+</div>
+</div>
+</div>
+</div>
+<p class="caption">An illustration. Real screenshots are coming.</p>
+</div>"""
+
 ICONS = {
     "gamepad": '<path d="M6 8h12a4 4 0 0 1 4 4.2l-.6 4a2.6 2.6 0 0 1-4.5 1.3L15 15.5H9l-1.9 2a2.6 2.6 0 0 1-4.5-1.3l-.6-4A4 4 0 0 1 6 8z"/><path d="M8 11v3M6.5 12.5h3"/><circle cx="15.5" cy="11.5" r=".6"/><circle cx="17.5" cy="13.5" r=".6"/>',
     "bag": '<path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8a3 3 0 0 1 6 0"/>',
@@ -51,6 +73,66 @@ CSP = ("default-src 'none'; img-src 'self' data:; style-src 'self'; script-src '
 
 NAV = [("features", "Features", "index.html#features", True), ("support", "Support", "index.html#support", True),
        ("wall", "Wall of Fame", "wall.html", True), ("faq", "FAQ", "index.html#faq", True)]
+
+
+SHOTS = ROOT / "assets" / "screens"
+TOUR = [("library", "Your whole library, one place.", "Steam, Epic and GOG side by side, with search and sorting."),
+        ("game", "Game pages with their own colors.", "Settings, play time and notes for each game, in the colors of its art."),
+        ("stats", "Playtime stats.", "Hours per week and store, and your most played. A supporter extra."),
+        ("saves", "Save backup.", "Back up a game's saves to iCloud Drive or any folder, and restore them in one click.")]
+
+
+def image_size(path):
+    """Width and height of a PNG or JPEG, read from the file header (no libraries)."""
+    import struct
+    data = path.read_bytes()
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return struct.unpack(">II", data[16:24])
+    i = 2
+    while i < len(data):
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+            h, w = struct.unpack(">HH", data[i + 5:i + 9])
+            return w, h
+        i += 2 + struct.unpack(">H", data[i + 2:i + 4])[0]
+    return None
+
+
+def shot_file(name):
+    for ext in ("jpg", "png"):
+        f = SHOTS / f"{name}.{ext}"
+        if f.exists():
+            return f
+    return None
+
+
+def img(f, alt, eager=False):
+    w, h = image_size(f) or (1600, 1000)
+    load = "" if eager else ' loading="lazy"'
+    return f'<img src="assets/screens/{f.name}" width="{w}" height="{h}" alt="{html.escape(alt, quote=True)}"{load}>'
+
+
+def hero_visual():
+    f = shot_file("home")
+    if not f:
+        return MOCK  # an illustration until real screenshots exist
+    return ('<div class="stage shots">' + img(f, "The MaPC home screen: a featured game, and the installed games ready to play", True)
+            + '</div>')
+
+
+def tour():
+    figs = []
+    for name, title, text in TOUR:
+        f = shot_file(name)
+        if f:
+            figs.append(f'<figure class="shot">{img(f, title)}<figcaption><b>{title}</b> {text}</figcaption></figure>')
+    if not figs:
+        return ""
+    return ('<section id="tour"><p class="eyebrow">A look inside</p><h2>Made for the Mac. <span class="fade">Not a web page in a window.</span></h2>'
+            '<div class="tour">' + "".join(figs) + "</div></section>")
 
 
 def icon(name):
@@ -115,6 +197,7 @@ def layout(meta, body, filename):
 
 
 def fill(text):
+    text = text.replace("{{HERO_VISUAL}}", hero_visual()).replace("{{TOUR}}", tour())
     text = re.sub(r"\{\{icon:(\w+)\}\}", lambda m: icon(m.group(1)), text)
     for key, value in {"DOWNLOAD_URL": DOWNLOAD_URL, "BUY_URL": BUY_URL, "EMAIL": EMAIL, "SITE": SITE,
                        "VERSION": VERSION, "RELEASES": RELEASES}.items():
