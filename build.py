@@ -77,9 +77,9 @@ NAV = [("features", "Features", "index.html#features", True), ("support", "Suppo
 
 SHOTS = ROOT / "assets" / "screens"
 TOUR = [("library", "Your whole library, one place.", "Steam, Epic and GOG side by side, with search and sorting."),
-        ("game", "Game pages with their own colors.", "Settings, play time and notes for each game, in the colors of its art."),
+        ("game", "Game pages with their own colors.", "Each game gets a page tinted by its art, with play time, details and settings."),
         ("stats", "Playtime stats.", "Hours per week and store, and your most played. A supporter extra."),
-        ("saves", "Save backup.", "Back up a game's saves to iCloud Drive or any folder, and restore them in one click.")]
+        ("saves", "Settings and save backup.", "Graphics, Retina and more for each game, and one-click save backup to iCloud Drive or any folder. Supporter extras.")]
 
 
 def image_size(path):
