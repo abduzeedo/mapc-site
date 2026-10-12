@@ -64,11 +64,9 @@ ICONS = {
     "download": '<path d="M12 4v11M7.5 11L12 15.5 16.5 11M5 20h14"/>',
 }
 
-# A placeholder pixel "M" until the logo is chosen.
-LOGO = ('<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1f0f1a"/>'
-        '<g fill="#ffb873"><rect x="6" y="7" width="3.6" height="18"/><rect x="22.4" y="7" width="3.6" height="18"/>'
-        '<rect x="9.6" y="10.6" width="3.6" height="3.6"/><rect x="18.8" y="10.6" width="3.6" height="3.6"/>'
-        '<rect x="14.2" y="14.2" width="3.6" height="3.6"/></g></svg>')
+# The MaPC logo (from the owner's mapc.svg).
+LOGO = ('<svg viewBox="0 0 1600 1600" aria-hidden="true"><rect width="1600" height="1600" rx="360" fill="#181818"/>'
+        '<path fill="#84273c" d="M969.55,302.78c-71.59,0-130.21,24.49-171.31,71.16-41.11-46.68-99.73-71.16-171.31-71.16-152.31,0-243.25,97.66-243.25,261.23v326.56h196.88v-326.56c0-67.12,31.87-75.72,59.63-75.72,25.61,0,59.64,7.85,59.64,75.72v326.56h196.86v-326.56c0-67.87,34.04-75.72,59.63-75.72,27.77,0,59.64,8.61,59.64,75.72v326.56h196.86v-326.56c0-163.57-90.94-261.23-243.25-261.23Z"/><path fill="#b42f2a" d="M972.46,438.24c-71.59,0-130.21,24.49-171.31,71.16-41.11-46.68-99.73-71.16-171.31-71.16-152.31,0-243.25,97.66-243.25,261.23v326.56h196.88v-326.56c0-67.12,31.87-75.72,59.63-75.72,25.61,0,59.64,7.85,59.64,75.72v326.56h196.86v-326.56c0-67.87,34.04-75.72,59.63-75.72,27.77,0,59.64,8.61,59.64,75.72v326.56h196.86v-326.56c0-163.57-90.94-261.23-243.25-261.23Z"/><path fill="#c25830" d="M972.46,573.7c-71.59,0-130.21,24.49-171.31,71.16-41.11-46.68-99.73-71.16-171.31-71.16-152.31,0-243.25,97.66-243.25,261.23v326.56h196.88v-326.56c0-67.12,31.87-75.72,59.63-75.72,25.61,0,59.64,7.85,59.64,75.72v326.56h196.86v-326.56c0-67.87,34.04-75.72,59.63-75.72,27.77,0,59.64,8.61,59.64,75.72v326.56h196.86v-326.56c0-163.57-90.94-261.23-243.25-261.23Z"/><path fill="#fcb40a" d="M972.46,709.16c-71.59,0-130.21,24.49-171.31,71.16-41.11-46.68-99.73-71.16-171.31-71.16-152.31,0-243.25,97.66-243.25,261.23v326.56h196.88v-326.56c0-67.12,31.87-75.72,59.63-75.72,25.61,0,59.64,7.85,59.64,75.72v326.56h196.86v-326.56c0-67.87,34.04-75.72,59.63-75.72,27.77,0,59.64,8.61,59.64,75.72v326.56h196.86v-326.56c0-163.57-90.94-261.23-243.25-261.23Z"/></svg>')
 
 CSP = ("default-src 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; "
        "base-uri 'none'; form-action 'none'")
@@ -162,11 +160,15 @@ def layout(meta, body, filename):
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="{url}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{SITE}/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE}/og-image.png">
 <link rel="stylesheet" href="styles.css">
 {ld}
 </head>
