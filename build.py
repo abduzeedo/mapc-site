@@ -14,6 +14,8 @@ import re
 ROOT = pathlib.Path(__file__).parent
 SITE = "https://mapc.games"
 EMAIL = "support@mapc.games"
+# Steale LLC's mailing address (a registered agent or mailbox address is fine). Shown on the privacy and terms pages when set.
+ADDRESS = ""
 BUY_URL = "https://abdz.gumroad.com/l/mapcpro"
 RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
@@ -199,6 +201,7 @@ def layout(meta, body, filename):
 def fill(text):
     text = text.replace("{{HERO_VISUAL}}", hero_visual()).replace("{{TOUR}}", tour())
     text = re.sub(r"\{\{icon:(\w+)\}\}", lambda m: icon(m.group(1)), text)
+    text = text.replace("{{ADDRESS_LINE}}", f"<p>Mailing address: {html.escape(ADDRESS)}</p>" if ADDRESS else "")
     for key, value in {"DOWNLOAD_URL": DOWNLOAD_URL, "BUY_URL": BUY_URL, "EMAIL": EMAIL, "SITE": SITE,
                        "VERSION": VERSION, "RELEASES": RELEASES}.items():
         text = text.replace("{{" + key + "}}", value)

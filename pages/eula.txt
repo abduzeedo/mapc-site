@@ -1,6 +1,6 @@
 MAPC END USER LICENSE AGREEMENT
 
-Last updated: October 9, 2026
+Last updated: October 11, 2026
 
 This agreement is between you and Steale LLC ("we", "us"), the developer of MaPC. By installing or using MaPC you agree to it. If you don't agree, don't install or use MaPC.
 
@@ -19,25 +19,25 @@ Except where the law or an open-source license (section 3) allows it, you may no
 MaPC downloads and runs open-source software, including Wine, DXVK, MoltenVK, Legendary and gogdl, listed in Settings > About > Acknowledgements. Each is licensed to you under its own license, not under this agreement. Nothing in this agreement limits the rights those licenses give you, including the right to modify and replace those components, to reverse engineer them for debugging your modifications, and to get their source code.
 
 4. SOFTWARE AND SERVICES YOU INSTALL
-MaPC helps you run software from others: game stores such as Steam, the Epic Games Store, GOG, Ubisoft Connect and the EA app, the games you buy there, and Apple's D3DMetal, which you download from Apple yourself. MaPC doesn't sell or license any of them, and doesn't give you any rights to them. You are responsible for following their terms, including Apple's license for D3DMetal and each store's and game's terms. Some games and online services don't allow or don't work with compatibility software; using them with MaPC is at your own risk. MaPC isn't affiliated with or endorsed by Valve, Epic Games, GOG, Ubisoft, Electronic Arts, Apple or CodeWeavers.
+MaPC helps you run software from others: game stores such as Steam, the Epic Games Store, GOG, Ubisoft Connect and the EA app, the games you buy there, and Apple's D3DMetal, which you download from Apple yourself. MaPC doesn't sell or license any of them, and doesn't give you any rights to them. You are responsible for following their terms, including Apple's license for D3DMetal and each store's and game's terms. Some games and online services don't allow or don't work with compatibility software, and their anti-cheat or terms may lead to a game or account being blocked or suspended; using them with MaPC is at your own risk. MaPC isn't affiliated with or endorsed by Valve, Epic Games, GOG, Ubisoft, Electronic Arts, Apple or CodeWeavers.
 
 5. ACCOUNTS AND PRIVACY
-MaPC doesn't collect personal data or usage data. You sign in to stores on their own pages. Store login tokens stay on your Mac, in a folder only your user account can read. MaPC connects to the internet to download engines and tools, artwork and store data. If you buy MaPC Pro, MaPC sends your license key to our payment provider, Gumroad, when you activate it and about once a week after that, to confirm the purchase; Gumroad's privacy policy covers the data it holds about your purchase. Your license is stored in your Mac's Keychain. MaPC downloads the Wall of Fame, a list of names supporters chose to publish, from our website. Save backups are copied only to the folder you choose and are never sent to us.
+We don't collect personal data or usage data through MaPC. Other companies do see your internet address when MaPC contacts them (GitHub for downloads, the stores for artwork and store data, Gumroad for your license). You sign in to stores on their own pages. Store login tokens stay on your Mac, in a folder only your user account can read. MaPC connects to the internet to download engines and tools, artwork and store data. If you buy MaPC Pro, MaPC sends your license key to our payment provider, Gumroad, when you activate it and about once a week after that, to confirm the purchase; Gumroad's privacy policy covers the data it holds about your purchase. Your license is stored in your Mac's Keychain. MaPC downloads the Wall of Fame, a list of names supporters chose to publish, from our website. Save backups are copied only to the folder you choose and are never sent to us.
 
 6. UPDATES
 MaPC may download updated engines, tools and compatibility settings. We may change or stop offering features, engines or updates.
 
 7. FEES AND REFUNDS
-Prices and refund terms are those shown where you bought MaPC.
+Prices and refund terms are those shown where you bought MaPC and on https://mapc.games/terms.html.
 
 8. TERMINATION
 This license ends automatically if you break this agreement. When it ends, stop using MaPC and delete it. Sections 3, 4, 9, 10 and 11 survive.
 
 9. NO WARRANTY
-MACADE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. WE DON'T PROMISE THAT ANY GAME WILL RUN, OR THAT MACADE WILL BE ERROR-FREE OR UNINTERRUPTED. SOME JURISDICTIONS DON'T ALLOW THESE EXCLUSIONS, SO SOME MAY NOT APPLY TO YOU.
+MAPC IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. WE DON'T PROMISE THAT ANY GAME WILL RUN, OR THAT MAPC WILL BE ERROR-FREE OR UNINTERRUPTED. SOME JURISDICTIONS DON'T ALLOW THESE EXCLUSIONS, SO SOME MAY NOT APPLY TO YOU.
 
 10. LIMITATION OF LIABILITY
-TO THE EXTENT THE LAW ALLOWS, WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, OR FOR LOST DATA, SAVES, ACCOUNTS OR PROFITS. OUR TOTAL LIABILITY IS LIMITED TO THE AMOUNT YOU PAID FOR MACADE IN THE 12 MONTHS BEFORE THE CLAIM. NOTHING HERE LIMITS LIABILITY THAT CAN'T BE LIMITED BY LAW, OR YOUR RIGHTS AS A CONSUMER UNDER LAWS THAT CAN'T BE WAIVED.
+TO THE EXTENT THE LAW ALLOWS, WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, OR FOR LOST DATA, SAVES, ACCOUNTS OR PROFITS. OUR TOTAL LIABILITY IS LIMITED TO THE AMOUNT YOU PAID FOR MAPC IN THE 12 MONTHS BEFORE THE CLAIM. SAVE BACKUP COPIES FILES AS THEY ARE, AND RESTORE REPLACES FILES WITH THE SAME NAME: CHECK YOUR BACKUPS AND KEEP ANOTHER COPY OF ANY SAVES YOU CAN'T LOSE. NOTHING HERE LIMITS LIABILITY THAT CAN'T BE LIMITED BY LAW, OR YOUR RIGHTS AS A CONSUMER UNDER LAWS THAT CAN'T BE WAIVED.
 
 11. GENERAL
 This agreement is the whole agreement between you and us about MaPC. If part of it can't be enforced, the rest still applies. We may update it; the version shipped with each MaPC release applies to that release. You must follow export laws that apply to you.
