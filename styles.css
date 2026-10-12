@@ -1,17 +1,17 @@
 /* MaPC site. No frameworks, no web fonts, no third-party requests. */
 :root {
-  /* Palette from the MaPC logo: charcoal, gold, orange, red, wine. Light mode is warm paper (#eddbc5). */
-  --bg: #eddbc5;
+  /* Palette from the MaPC logo: charcoal, gold, orange, red, wine. Light mode is warm paper (#f3e8d8). */
+  --bg: #f3e8d8;
   --ink: #2a1710;
   --fade: #7b6552;
-  --line: #cdb590;
-  --soft: #dcc6a8;
-  --panel: #e3cfb3;
+  --line: #d3be9d;
+  --soft: #e0ccb0;
+  --panel: #e8d6bc;
   --btn: #181818;
   --btn-ink: #f5ede0;
   --accent: #c25830;
-  --tier-bg: #e3cfb3;
-  --wall-bg: #e3cfb3;
+  --tier-bg: #e8d6bc;
+  --wall-bg: #e8d6bc;
   --on-ink: #2a1710;
   --on-fade: #7b6552;
   --on-btn: #fff;
