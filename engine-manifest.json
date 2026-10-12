@@ -1,0 +1,19 @@
+{
+  "engines": [
+    {
+      "version": "1.0.0",
+      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-1.0.0/mapc-engine-1.0.0.tar.xz",
+      "sha256": "35c631ed67dae53ee4792a8c7844c1af67df3113a5b0e2d7844a05ffdbcb52bc",
+      "size": 220746080,
+      "minAppVersion": "0.1",
+      "backends": [
+        "dxvk"
+      ]
+    }
+  ],
+  "steamArgs": [
+    "-no-cef-sandbox",
+    "-noverifyfiles"
+  ],
+  "knownIssues": {}
+}
