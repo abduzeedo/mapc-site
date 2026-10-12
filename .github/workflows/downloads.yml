@@ -1,0 +1,30 @@
+# Saves how many times MaPC.dmg was downloaded (GitHub's own count) to downloads.json, which the site shows.
+name: Update download count
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Count downloads of MaPC.dmg
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          total=$(gh api --paginate "repos/${{ github.repository }}/releases" \
+            --jq '.[] | .assets[] | select(.name == "MaPC.dmg") | .download_count' | awk '{s+=$1} END {print s+0}')
+          printf '{"downloads": %s, "updated": "%s"}\n' "$total" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > downloads.json
+          cat downloads.json
+      - name: Commit if it changed
+        run: |
+          git config user.name "Fabio Sasso"
+          git config user.email "support@mapc.games"
+          if ! git diff --quiet -- downloads.json; then
+            git add downloads.json
+            git commit -m "Update download count"
+            git push
+          fi
