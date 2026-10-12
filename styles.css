@@ -172,13 +172,11 @@ section { padding: 96px 0 0; }
 .mono { font-family: var(--mono); font-size: 12.5px; color: var(--fade); word-break: break-all; }
 
 /* Support tiers (arcade) */
-.tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 44px; }
-@media (max-width: 900px) { .tiers { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .tiers { grid-template-columns: 1fr; } }
+.tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px; }
+@media (max-width: 800px) { .tiers { grid-template-columns: 1fr; } }
 .tier { --c: var(--rose); position: relative; padding: 22px 20px 20px; border-radius: 18px; background: var(--tier-bg); color: var(--on-ink); display: flex; flex-direction: column; gap: 6px; }
 .tier.t2 { --c: var(--red); }
 .tier.t3 { --c: var(--orange); }
-.tier.t4 { --c: var(--gold); --cf: #fcb40a; --on: #181818; }
 .tier h3 { font: 700 12px var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--c); }
 .tier .price { font-size: 34px; font-weight: 700; letter-spacing: -0.03em; }
 .tier .price small { font-size: 14px; font-weight: 500; color: var(--on-fade); letter-spacing: 0; }
