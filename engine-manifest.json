@@ -11,10 +11,10 @@
       ]
     },
     {
-      "version": "2.0.0",
-      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-2.0.0/mapc-engine-2.0.0.tar.xz",
-      "sha256": "63ba8bfbc415e2a97d75af3de8e0721c721c079d37e179f057c63188d55278e4",
-      "size": 287159868,
+      "version": "2.0.1",
+      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-2.0.1/mapc-engine-2.0.1.tar.xz",
+      "sha256": "ec9db3c00f24b2ff3dd4923ede21bcc77c7080f94a2b7fee70c168706c68f0dc",
+      "size": 287158872,
       "minAppVersion": "1.0.1",
       "backends": [
         "d3dMetal"

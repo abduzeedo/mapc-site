@@ -3,7 +3,7 @@
 
   python3 build.py
 
-Each page in pages/ starts with `title:` and `description:` lines, a `---` line, then the HTML of <main>.
+Each page in pages/ starts with `title:` and `description:` lines (optional `robots:`), a `---` line, then the HTML of <main>.
 Placeholders in pages: {{icon:name}}, {{DOWNLOAD_URL}}, {{BUY_URL}}, {{EMAIL}}, {{SITE}}, {{VERSION}}.
 Edit the settings below, rebuild, and commit the generated .html files.
 """
@@ -19,7 +19,7 @@ ADDRESS = ""
 BUY_URL = "https://abdz.gumroad.com/l/mapcpro"
 RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
-VERSION = "1.0.1 Beta"
+VERSION = "1.0.2 Beta"
 
 MOCK = """<div class="stage" role="img" aria-label="Illustration of the MaPC library: a sidebar of stores and a grid of game covers with a Play button">
 <div class="mock">
@@ -142,6 +142,7 @@ def icon(name):
 def layout(meta, body, filename):
     title, desc = html.escape(meta["title"], quote=True), html.escape(meta["description"], quote=True)
     url = SITE + "/" + ("" if filename == "index.html" else filename)
+    robots = f'\n<meta name="robots" content="{html.escape(meta["robots"], quote=True)}">' if meta.get("robots") else ""
     nav = "".join(f'<li class="hide-sm"><a href="{href}">{label}</a></li>' for _, label, href, _ in NAV)
     ld = ""
     if filename == "index.html":
@@ -157,7 +158,7 @@ def layout(meta, body, filename):
 <meta http-equiv="Content-Security-Policy" content="{CSP}">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light dark">{robots}
 <link rel="canonical" href="{url}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -186,7 +187,7 @@ def layout(meta, body, filename):
 <div class="about"><a class="brand" href="index.html">{LOGO}<span>MaPC</span></a>
 <p class="fade">Your PC games, on your Mac.<br>Made by Steale LLC.</p></div>
 <div><h4>Product</h4><ul><li><a href="index.html#download">Download</a></li><li><a href="index.html#support">Support MaPC</a></li><li><a href="wall.html">Wall of Fame</a></li><li><a href="changelog.html">What&rsquo;s new</a></li></ul></div>
-<div><h4>Help</h4><ul><li><a href="index.html#faq">FAQ</a></li><li><a href="directx12.html">DirectX 12 setup</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{RELEASES}">All releases</a></li></ul></div>
+<div><h4>Help</h4><ul><li><a href="index.html#faq">FAQ</a></li><li><a href="directx12.html">DirectX 12 (advanced)</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{RELEASES}">All releases</a></li></ul></div>
 <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms &amp; refunds</a></li><li><a href="eula.html">License agreement</a></li><li><a href="opensource.html">Open source</a></li></ul></div>
 </div>
 <div class="legal">
@@ -226,7 +227,7 @@ def main():
     print("built eula.html")
 
     (ROOT / "favicon.svg").write_text(LOGO.replace("<svg ", '<svg xmlns="http://www.w3.org/2000/svg" ', 1), encoding="utf-8")
-    pages = ["", "directx12.html", "wall.html", "changelog.html", "privacy.html", "terms.html", "opensource.html", "eula.html"]
+    pages = ["", "wall.html", "changelog.html", "privacy.html", "terms.html", "opensource.html", "eula.html"]
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{SITE}/{p}</loc></url>\n" for p in pages) + "</urlset>\n", encoding="utf-8")
