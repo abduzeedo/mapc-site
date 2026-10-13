@@ -1,0 +1,42 @@
+title: DirectX 12 setup — MaPC
+description: How to set up DirectX 12 games in MaPC with Apple's D3DMetal from your own Game Porting Toolkit download.
+---
+<div class="wrap"><article class="doc">
+<h1>DirectX 12 setup</h1>
+<p class="meta">Advanced &middot; MaPC 1.0.1 Beta or later &middot; about 10 minutes</p>
+
+<p>DirectX 11 games work in MaPC without any of this. DirectX 12 games need Apple&rsquo;s <b>D3DMetal</b>, which is part of Apple&rsquo;s <b>Game Porting Toolkit</b>. MaPC can&rsquo;t include it, so you download the toolkit from Apple yourself and MaPC sets it up.</p>
+
+<h2>Before you start: Apple&rsquo;s license</h2>
+<p>The Game Porting Toolkit comes with Apple&rsquo;s license, which you accept when you download it. That license covers developing, testing and evaluating games for Apple devices. <b>Your use of D3DMetal is between you and Apple</b>: read Apple&rsquo;s terms and decide whether your use fits them. MaPC doesn&rsquo;t include, sell or change Apple&rsquo;s software. It copies D3DMetal from your download, checks Apple&rsquo;s signature first, and shows you Apple&rsquo;s license before installing. This is an advanced option, used at your own risk.</p>
+
+<h2>What you need</h2>
+<ul>
+<li>MaPC 1.0.1 Beta or later, set up with its main engine.</li>
+<li>A free Apple Account, to sign in to Apple&rsquo;s developer downloads.</li>
+<li>About 650 MB free: 270 MB for MaPC&rsquo;s DirectX 12 engine, the rest for the toolkit download.</li>
+</ul>
+
+<h2>Steps</h2>
+<ol>
+<li><b>Open the DirectX 12 setup.</b> In MaPC, click <b>DirectX 12</b> at the bottom of Home. You can also use <b>Settings &rsaquo; Engine &rsaquo; Set Up DirectX 12&hellip;</b>, or <b>Add DirectX 12 Support</b> on a DirectX 12 game&rsquo;s page.</li>
+<li><b>Download the DirectX 12 engine.</b> Next to <i>DirectX 12 engine</i>, click <b>Download</b>. It&rsquo;s free, built from CodeWeavers&rsquo; open-source CrossOver code, and checked before MaPC uses it. Wait for the green check.</li>
+<li><b>Download the Game Porting Toolkit from Apple.</b> Click <b>Open Apple&rsquo;s Download Page</b>. Sign in with your Apple Account, find <b>Game Porting Toolkit</b> (3.0 or later) and download the <code>.dmg</code> file. You don&rsquo;t need to open it.</li>
+<li><b>Choose the download in MaPC.</b> Click <b>Choose Download&hellip;</b> and pick the file, usually <code>Downloads/Game_Porting_Toolkit_3.0.dmg</code>. You can also drag it onto the dashed box. MaPC opens it, finds D3DMetal and checks that it&rsquo;s signed by Apple. Nothing is installed yet.</li>
+<li><b>Read Apple&rsquo;s license and install.</b> MaPC shows the license from your download. If you agree, click <b>Agree and Install</b>. When both steps have a green check, click <b>Done</b>.</li>
+<li><b>Play.</b> MaPC detects DirectX 12 games and uses D3DMetal for them automatically. A game&rsquo;s page shows <i>D3DMetal</i> under Graphics. For a Steam game, MaPC may ask to restart Steam once, because Steam and its games share one engine.</li>
+</ol>
+
+<h2>If something goes wrong</h2>
+<ul>
+<li><b>&ldquo;That file doesn&rsquo;t contain D3DMetal.&rdquo;</b> Make sure you chose the Game Porting Toolkit disk image from Apple, not another file. Versions before MaPC 1.0.1 can&rsquo;t read the toolkit&rsquo;s current layout, so update MaPC.</li>
+<li><b>&ldquo;&hellip;isn&rsquo;t signed by Apple.&rdquo;</b> The file is damaged or isn&rsquo;t Apple&rsquo;s. Download it again from Apple&rsquo;s page.</li>
+<li><b>&ldquo;Close running games first.&rdquo;</b> Quit games and Steam, then try again.</li>
+<li><b>A game still won&rsquo;t start.</b> Not every DirectX 12 game works on D3DMetal yet. Open the game&rsquo;s page, choose More &rsaquo; Show Log, and email it to <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> with your Mac model.</li>
+</ul>
+
+<h2>Updating or removing</h2>
+<p>To use a newer toolkit, open the DirectX 12 setup again and click <b>Replace&hellip;</b> next to <i>Apple D3DMetal</i>, then choose the new download. To remove DirectX 12 support, go to <b>Settings &rsaquo; Engine &rsaquo; Installed engines</b> and click <b>Remove</b> next to engine 2.0.0, then delete the folder <code>~/Library/Application Support/Macade/D3DMetal</code>.</p>
+
+<p class="meta">Apple, Metal and Game Porting Toolkit are trademarks of Apple Inc. CrossOver is a trademark of CodeWeavers. MaPC isn&rsquo;t affiliated with or endorsed by either.</p>
+</article></div>

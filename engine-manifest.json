@@ -9,6 +9,16 @@
       "backends": [
         "dxvk"
       ]
+    },
+    {
+      "version": "2.0.0",
+      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-2.0.0/mapc-engine-2.0.0.tar.xz",
+      "sha256": "63ba8bfbc415e2a97d75af3de8e0721c721c079d37e179f057c63188d55278e4",
+      "size": 287159868,
+      "minAppVersion": "1.0.1",
+      "backends": [
+        "d3dMetal"
+      ]
     }
   ],
   "steamArgs": [

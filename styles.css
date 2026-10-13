@@ -253,7 +253,7 @@ footer::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 8px
 @media (min-width: 1100px) { .wall-top { margin-inline: auto; width: min(1080px, 100% - 48px); } }
 
 /* Real screenshots */
-.stage.shots { padding: clamp(10px, 2.4vw, 28px); }
+.stage.shots { padding: 0; background: none; border: 0; border-radius: 0; overflow: visible; }
 .stage.shots img, .shot img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 30px 60px -30px rgba(31, 15, 26, .5); }
 .tour { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 28px; margin-top: 52px; }
 @media (max-width: 760px) { .tour { grid-template-columns: 1fr; } }

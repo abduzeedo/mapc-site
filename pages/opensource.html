@@ -13,11 +13,17 @@ description: The open-source software MaPC runs, and where to get its source.
 <li><b>Wine Mono</b> &mdash; a mix of MIT, LGPL and GPL components.</li>
 <li><b>Legendary</b> (Epic Games) and <b>gogdl</b> (GOG) &mdash; GPL 3.0. They run as separate programs, and MaPC doesn&rsquo;t include or change their code.</li>
 </ul>
-<p>The full list, with licenses, is in the app under Settings &rsaquo; About &rsaquo; Acknowledgements, and each engine carries its own license files.</p>
+<p>The full list, with licenses, is in the app under Settings &rsaquo; About &rsaquo; Acknowledgements. Each engine carries the full license text of everything inside it, with a list of components in <code>licenses/THIRD-PARTY-NOTICES.md</code>. Engines don&rsquo;t contain any software from Apple.</p>
 
 <h2>Source code</h2>
-<p>We publish the source of every engine we build with each release on the <a href="{{RELEASES}}">releases page</a>. You may modify and replace these components, and you can get their source code. If you can&rsquo;t find something, email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> and we&rsquo;ll send it.</p>
+<p>Every engine is published on the <a href="{{RELEASES}}">releases page</a> with its sources:</p>
+<ul>
+<li><b>DirectX 12 engine (2.x)</b>: Wine built by us, unmodified, from CodeWeavers&rsquo; CrossOver 26.3.0 source. The exact source tarball and our build script are attached to the engine&rsquo;s release, and the build script is also inside the engine (<code>licenses/build</code>).</li>
+<li><b>Main engine (1.x)</b>: Wine Staging 11.18 and DXVK as built by Gcenx; the release links to their exact sources.</li>
+<li><b>Runtime libraries</b> (GnuTLS, FreeType, SDL2, MoltenVK and others) in both engines come from Gcenx&rsquo;s Wine 11.18 builds.</li>
+</ul>
+<p>You may modify and replace these components. For at least three years after we last distribute an engine, anyone who has it can ask for the complete corresponding source of any LGPL or GPL component in it, for no more than the cost of providing it: email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
 
 <h2>Apple&rsquo;s D3DMetal</h2>
-<p>D3DMetal is part of Apple&rsquo;s Game Porting Toolkit. Apple&rsquo;s license allows redistribution only for non-commercial use, so MaPC never includes it. You download it from Apple, and MaPC copies it after checking Apple&rsquo;s signature.</p>
+<p>D3DMetal is part of Apple&rsquo;s Game Porting Toolkit. Apple&rsquo;s license allows redistribution only for non-commercial use, so MaPC never includes or distributes it. You download the toolkit from Apple under Apple&rsquo;s license, which covers developing, testing and evaluating games, and MaPC copies D3DMetal from your download after checking Apple&rsquo;s signature. Your use of it is governed by that license. See <a href="directx12.html">DirectX 12 setup</a>.</p>
 </article></div>

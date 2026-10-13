@@ -3,10 +3,10 @@ description: Install and play Windows games from Steam, Epic Games and GOG on yo
 ---
 <div class="wrap">
 <section class="hero">
-<p class="eyebrow">For Apple Silicon Macs</p>
+<p class="eyebrow">For Apple Silicon Macs <span class="tag">PUBLIC BETA</span></p>
 <h1>Your PC games, on your Mac. <span class="fade">Connect Steam, Epic and GOG, then press Play. No Wine to set up, nothing to tinker with.</span></h1>
 <div class="cta">
-<a class="btn btn-primary" href="{{DOWNLOAD_URL}}">{{icon:download}} Download &mdash; free</a>
+<a class="btn btn-primary" href="{{DOWNLOAD_URL}}">{{icon:download}} Download the beta &mdash; free</a>
 <a class="btn btn-ghost" href="#support">Support MaPC &mdash; from $4.99</a>
 </div>
 <p class="fine">macOS 15 or later &middot; Apple Silicon &middot; Version {{VERSION}} &middot; <a href="#limits">What it can&rsquo;t do</a><span class="dl" data-downloads hidden> &middot; <b data-downloads-n></b> downloads</span></p>
@@ -31,7 +31,7 @@ description: Install and play Windows games from Steam, Epic Games and GOG on yo
 <h2>Everything you already own. <span class="fade">Free, and it stays that way.</span></h2>
 <div class="grid3">
 <div class="item">{{icon:bag}}<p><b>Steam, Epic and GOG.</b> Your libraries side by side, with cover art, search and sorting. Install, play, uninstall.</p></div>
-<div class="item">{{icon:cube}}<p><b>DirectX 11 and 12.</b> DirectX 12 games run through Apple&rsquo;s own D3DMetal, set up in one guided step.</p></div>
+<div class="item">{{icon:cube}}<p><b>DirectX 11, and 12 for advanced users.</b> DirectX 12 uses Apple&rsquo;s D3DMetal from your own Game Porting Toolkit download. <a href="directx12.html">How to set it up</a>.</p></div>
 <div class="item">{{icon:sliders}}<p><b>Per-game settings.</b> Graphics backend, ray tracing, MetalFX upscaling and launch options, saved for each game.</p></div>
 <div class="item">{{icon:window}}<p><b>A real Mac app.</b> Built with SwiftUI. Light and dark mode, and game pages that take their colors from the game&rsquo;s art.</p></div>
 <div class="item">{{icon:shield}}<p><b>Private by design.</b> No telemetry and no analytics. Store logins stay on your Mac.</p></div>
@@ -99,7 +99,8 @@ description: Install and play Windows games from Steam, Epic Games and GOG on yo
 <div class="limits">
 <div><b>Kernel anti-cheat games</b><span>Fortnite, Valorant and many EAC or BattlEye titles can&rsquo;t run on macOS at all.</span></div>
 <div><b>Every game</b><span>Many games run well, some need tweaks and some don&rsquo;t run. Game pages show known issues. You can try MaPC free before supporting it.</span></div>
-<div><b>DirectX 12 out of the box</b><span>Apple&rsquo;s license doesn&rsquo;t let us include D3DMetal. You download it from Apple (free with an Apple Account) and MaPC sets it up. DirectX 11 games work without it.</span></div>
+<div><b>It&rsquo;s a beta</b><span>MaPC is new. Expect rough edges, and tell us what breaks: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>. Updates fix games as we test them.</span></div>
+<div><b>DirectX 12 out of the box</b><span>It&rsquo;s an advanced, at-your-own-risk option. It needs Apple&rsquo;s Game Porting Toolkit, which MaPC doesn&rsquo;t include and which Apple licenses for developing, testing and evaluating games. <a href="directx12.html">Read the setup guide</a>. DirectX 11 games work without it.</span></div>
 <div><b>Intel Macs</b><span>MaPC needs Apple Silicon and Rosetta 2. Apple has said macOS 27 is the last release with full Rosetta, so the engine is built to be swappable.</span></div>
 <div><b>Ubisoft Connect and EA app</b><span>Coming soon. Their launchers don&rsquo;t run reliably yet.</span></div>
 </div>
@@ -109,12 +110,12 @@ description: Install and play Windows games from Steam, Epic Games and GOG on yo
 <p class="eyebrow">FAQ</p>
 <h2>Questions? <span class="fade">Answers.</span></h2>
 <div class="faq">
-<details><summary>What is MaPC?</summary><div class="a"><p>A native Mac app that installs and runs Windows games from Steam, Epic Games and GOG on Apple Silicon Macs. It uses Wine underneath, and you never have to deal with it.</p></div></details>
+<details><summary>What is MaPC?</summary><div class="a"><p>A native Mac app, now in public beta, that installs and runs Windows games from Steam, Epic Games and GOG on Apple Silicon Macs. It uses Wine underneath, and you never have to deal with it.</p></div></details>
 <details><summary>Is it really free?</summary><div class="a"><p>Yes. Every store, installing, playing and DirectX 12 support are free. Supporting MaPC is optional and unlocks a few extras. You can use the app for as long as you like without paying.</p></div></details>
 <details><summary>What do I get when I support MaPC?</summary><div class="a"><p>Save backup and restore, playtime stats, keep-Mac-awake, game shortcuts, a menu bar launcher, Siri and Shortcuts, Retina resolution, the performance HUD, &#8984; as Control, and your name on the Wall of Fame. It&rsquo;s a one-time purchase that works on up to 5 of your Macs and includes every extra added in the 1.x versions.</p></div></details>
 <details><summary>Which Macs does it run on?</summary><div class="a"><p>Macs with Apple silicon (M1 or later) running macOS 15 or later. It also needs Rosetta 2, which the setup offers to install.</p></div></details>
-<details><summary>Which games work?</summary><div class="a"><p>Many Direct3D 11 and DirectX 12 games do. Games with kernel-level anti-cheat can&rsquo;t run. There&rsquo;s no guarantee for any one game, so try it free first. If you support MaPC and aren&rsquo;t happy, you have 14 days to get a refund.</p></div></details>
-<details><summary>How does DirectX 12 work?</summary><div class="a"><p>MaPC uses Apple&rsquo;s D3DMetal, which comes with Apple&rsquo;s Game Porting Toolkit. Apple&rsquo;s license doesn&rsquo;t allow MaPC to include it, so setup walks you through downloading it from Apple and checks that it&rsquo;s genuinely signed by Apple.</p></div></details>
+<details><summary>Which games work?</summary><div class="a"><p>Many Direct3D 11 games do, and DirectX 12 games can with the <a href="directx12.html">advanced setup</a>. Games with kernel-level anti-cheat can&rsquo;t run. There&rsquo;s no guarantee for any one game, so try it free first. If you support MaPC and aren&rsquo;t happy, you have 14 days to get a refund.</p></div></details>
+<details><summary>How does DirectX 12 work?</summary><div class="a"><p>MaPC uses Apple&rsquo;s D3DMetal, part of Apple&rsquo;s Game Porting Toolkit. MaPC never includes it: you download the toolkit from Apple, and MaPC copies D3DMetal from it after checking it&rsquo;s genuinely signed by Apple. Your use of it is governed by Apple&rsquo;s license, which covers developing, testing and evaluating games, so it&rsquo;s an advanced option at your own risk. Step by step: <a href="directx12.html">DirectX 12 setup</a>.</p></div></details>
 <details><summary>Is my data private?</summary><div class="a"><p>MaPC has no telemetry, and this site has no analytics or cookies. You sign in to stores on their own pages, and the login tokens stay on your Mac. If you support MaPC, the app sends your license key to Gumroad to confirm it. Read the <a href="privacy.html">privacy page</a>.</p></div></details>
 <details><summary>Can I use one license on several Macs?</summary><div class="a"><p>Yes, up to 5. If you need to move it to another Mac, email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p></div></details>
 <details><summary>How do refunds work?</summary><div class="a"><p>Reply to your Gumroad receipt or email us within 14 days for a full refund. The license stops working and MaPC goes back to the free version. See the <a href="terms.html">terms</a>.</p></div></details>
