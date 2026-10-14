@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "supporters": [
     {
       "name": "k",
@@ -19,6 +19,10 @@
     },
     {
       "name": "Ditbardh Uka",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Anton Kovalev",
       "tier": "insert-coin"
     }
   ]
