@@ -15,7 +15,7 @@ ROOT = pathlib.Path(__file__).parent
 SITE = "https://mapc.games"
 EMAIL = "support@mapc.games"
 # Steale LLC's mailing address (a registered agent or mailbox address is fine). Shown on the privacy and terms pages when set.
-ADDRESS = ""
+ADDRESS = "Thornhill Dr, Oakland, California 94611, USA"
 BUY_URL = "https://abdz.gumroad.com/l/mapcpro"
 RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
