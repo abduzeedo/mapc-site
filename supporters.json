@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "supporters": [
     {
       "name": "k",
@@ -28,6 +28,10 @@
     {
       "name": "Alexander Blunck",
       "tier": "insert-coin"
+    },
+    {
+      "name": "Cary Joice",
+      "tier": "arcade-hero"
     }
   ]
 }
