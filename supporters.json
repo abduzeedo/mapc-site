@@ -116,6 +116,34 @@
     {
       "name": "S",
       "tier": "insert-coin"
+    },
+    {
+      "name": "S. E.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "K. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. L.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "N. G.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. T.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "P. K.",
+      "tier": "arcade-hero"
+    },
+    {
+      "name": "A",
+      "tier": "arcade-hero"
     }
   ]
 }
