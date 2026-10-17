@@ -4,7 +4,7 @@
   python3 build.py
 
 Each page in pages/ starts with `title:` and `description:` lines (optional `robots:`), a `---` line, then the HTML of <main>.
-Placeholders in pages: {{icon:name}}, {{DOWNLOAD_URL}}, {{BUY_URL}}, {{EMAIL}}, {{SITE}}, {{VERSION}}.
+Placeholders in pages: {{icon:name}}, {{DOWNLOAD_URL}}, {{BUY_URL}}, {{EMAIL}}, {{SITE}}, {{VERSION}}, {{RELEASES}}, {{SOURCE_URL}}.
 Edit the settings below, rebuild, and commit the generated .html files.
 """
 import html
@@ -19,6 +19,8 @@ ADDRESS = "Thornhill Dr, Oakland, California 94611, USA"
 BUY_URL = "https://abdz.gumroad.com/l/mapcpro"
 RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
+# MacadeKit, the open-source part of MaPC that runs the games (Apache 2.0).
+SOURCE_URL = "https://github.com/abduzeedo/mapc-engine"
 VERSION = "1.0.8 Beta"
 
 MOCK = """<div class="stage" role="img" aria-label="Illustration of the MaPC library: a sidebar of stores and a grid of game covers with a Play button">
@@ -187,7 +189,7 @@ def layout(meta, body, filename):
 <div class="about"><a class="brand" href="index.html">{LOGO}<span>MaPC</span></a>
 <p class="fade">Your PC games, on your Mac.<br>Made by Steale LLC.</p></div>
 <div><h4>Product</h4><ul><li><a href="index.html#download">Download</a></li><li><a href="index.html#support">Support MaPC</a></li><li><a href="wall.html">Wall of Fame</a></li><li><a href="changelog.html">What&rsquo;s new</a></li></ul></div>
-<div><h4>Help</h4><ul><li><a href="index.html#faq">FAQ</a></li><li><a href="directx12.html">DirectX 12 (advanced)</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{RELEASES}">All releases</a></li></ul></div>
+<div><h4>Help</h4><ul><li><a href="index.html#faq">FAQ</a></li><li><a href="directx12.html">DirectX 12 (advanced)</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{RELEASES}">All releases</a></li><li><a href="{SOURCE_URL}">Source code (GitHub)</a></li></ul></div>
 <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms &amp; refunds</a></li><li><a href="eula.html">License agreement</a></li><li><a href="opensource.html">Open source</a></li></ul></div>
 </div>
 <div class="legal">
@@ -206,7 +208,7 @@ def fill(text):
     text = re.sub(r"\{\{icon:(\w+)\}\}", lambda m: icon(m.group(1)), text)
     text = text.replace("{{ADDRESS_LINE}}", f"<p>Mailing address: {html.escape(ADDRESS)}</p>" if ADDRESS else "")
     for key, value in {"DOWNLOAD_URL": DOWNLOAD_URL, "BUY_URL": BUY_URL, "EMAIL": EMAIL, "SITE": SITE,
-                       "VERSION": VERSION, "RELEASES": RELEASES}.items():
+                       "VERSION": VERSION, "RELEASES": RELEASES, "SOURCE_URL": SOURCE_URL}.items():
         text = text.replace("{{" + key + "}}", value)
     return text
 

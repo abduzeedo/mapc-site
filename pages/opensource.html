@@ -1,9 +1,13 @@
 title: Open source — MaPC
-description: The open-source software MaPC runs, and where to get its source.
+description: MaPC's open-source game engine code, the open-source software it runs, and where to get the source.
 ---
 <div class="wrap"><article class="doc">
 <h1>Open source</h1>
-<p class="meta">MaPC itself is proprietary software. It downloads and runs open-source software, each under its own license, which this agreement does not change.</p>
+<p class="meta">The part of MaPC that runs your games is open source. The app around it (its interface and licensing) is proprietary. MaPC also downloads and runs other open-source software, each under its own license.</p>
+
+<h2>MaPC&rsquo;s game code</h2>
+<p>Everything that decides how a game runs is open source under the Apache License 2.0: <a href="{{SOURCE_URL}}">github.com/abduzeedo/mapc-engine</a>. That covers the Wine engines and how they&rsquo;re built, the graphics backends (DXVK, WineD3D), the environment each game gets, the Steam, Epic, GOG, Ubisoft and EA integrations, saves, and controllers.</p>
+<p>If a game doesn&rsquo;t work, the fix is usually there: a DLL override, an environment variable, a backend choice. You can change it, try it on your own Mac with the included <code>mapc</code> command-line tool, and send a pull request. MaPC uses an exact, tagged release of it.</p>
 
 <h2>What MaPC runs</h2>
 <ul>
