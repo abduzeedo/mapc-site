@@ -64,6 +64,10 @@
     {
       "name": "Andre Elijah",
       "tier": "arcade-hero"
+    },
+    {
+      "name": "Juan Colilla",
+      "tier": "insert-coin"
     }
   ]
 }
