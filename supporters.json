@@ -144,6 +144,22 @@
     {
       "name": "A",
       "tier": "arcade-hero"
+    },
+    {
+      "name": "D",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "D. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. P.",
+      "tier": "high-scorer"
     }
   ]
 }
