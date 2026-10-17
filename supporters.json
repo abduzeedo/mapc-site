@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "supporters": [
     {
       "name": "k",
@@ -31,6 +31,38 @@
     },
     {
       "name": "CarvisAmazing",
+      "tier": "arcade-hero"
+    },
+    {
+      "name": "Afshan Pathan",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Tyrone Addison",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Kiyan Lalani",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Numan Çakır",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Shawn Choo",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Nikita Nikitsin",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Łukasz",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Andre Elijah",
       "tier": "arcade-hero"
     }
   ]
