@@ -6,11 +6,11 @@
       "tier": "high-scorer"
     },
     {
-      "name": "Munechika Nishida",
+      "name": "M. N.",
       "tier": "insert-coin"
     },
     {
-      "name": "Volkan Ozdamar",
+      "name": "V. O.",
       "tier": "insert-coin"
     },
     {
@@ -18,15 +18,15 @@
       "tier": "insert-coin"
     },
     {
-      "name": "Ditbardh Uka",
+      "name": "D. U.",
       "tier": "insert-coin"
     },
     {
-      "name": "Anton Kovalev",
+      "name": "A. K.",
       "tier": "insert-coin"
     },
     {
-      "name": "Alexander Blunck",
+      "name": "A. B.",
       "tier": "insert-coin"
     },
     {
@@ -34,60 +34,72 @@
       "tier": "arcade-hero"
     },
     {
-      "name": "Afshan Pathan",
+      "name": "A. P.",
       "tier": "insert-coin"
     },
     {
-      "name": "Tyrone Addison",
+      "name": "T. A.",
       "tier": "insert-coin"
     },
     {
-      "name": "Kiyan Lalani",
+      "name": "K. L.",
       "tier": "insert-coin"
     },
     {
-      "name": "Numan Çakır",
+      "name": "N. Ç.",
       "tier": "insert-coin"
     },
     {
-      "name": "Shawn Choo",
+      "name": "S. C.",
       "tier": "insert-coin"
     },
     {
-      "name": "Nikita Nikitsin",
+      "name": "N. N.",
       "tier": "insert-coin"
     },
     {
-      "name": "Łukasz",
+      "name": "Ł.",
       "tier": "insert-coin"
     },
     {
-      "name": "Juan Colilla",
+      "name": "J. C.",
       "tier": "insert-coin"
     },
     {
-      "name": "sergio R",
+      "name": "S. R.",
       "tier": "insert-coin"
     },
     {
-      "name": "Fabian Binder",
+      "name": "F. B.",
       "tier": "insert-coin"
     },
     {
-      "name": "Trevor Haldenby",
+      "name": "T. H.",
       "tier": "insert-coin"
     },
     {
-      "name": "Bastiaan van Oorde",
+      "name": "B. V. O.",
       "tier": "insert-coin"
     },
     {
-      "name": "Gabriel González Tirado",
+      "name": "G. G. T.",
       "tier": "insert-coin"
     },
     {
-      "name": "Aleksandr Avetisov",
+      "name": "A. A.",
       "tier": "insert-coin"
+    },
+    {
+      "name": "N",
+      "tier": "high-scorer"
+    },
+    {
+      "name": "L. M.",
+      "tier": "arcade-hero"
+    },
+    {
+      "name": "A. F.",
+      "tier": "arcade-hero"
     }
   ]
 }
