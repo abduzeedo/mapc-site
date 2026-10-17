@@ -3,13 +3,13 @@
     <channel>
         <title>MaPC</title>
         <item>
-            <title>1.0.7</title>
-            <pubDate>Sat, 17 Oct 2026 08:46:19 -0700</pubDate>
+            <title>1.0.8</title>
+            <pubDate>Sat, 17 Oct 2026 11:06:54 -0700</pubDate>
             <link>https://mapc.games</link>
-            <sparkle:version>1.0.7</sparkle:version>
-            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+            <sparkle:version>1.0.8</sparkle:version>
+            <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/abduzeedo/mapc-site/releases/download/v1.0.7/MaPC.dmg" length="7052671" type="application/octet-stream" sparkle:edSignature="n0R5o+htF0GxfdqOKSh6vTCvALypzYtWmE/TJ+kCk0F10pFEo8jqp9fx4ZEo6T3FoYDVFWG6k9s8VwQnynGxDw=="/>
+            <enclosure url="https://github.com/abduzeedo/mapc-site/releases/download/v1.0.8/MaPC.dmg" length="7058330" type="application/octet-stream" sparkle:edSignature="yWEuBxDMepXaj2NDXllUf8TARyrlgRRNWOPobMb55nKi08IVyJgIqJgSgVRkXOoDUraFJpxxm9QTdXGc11XpDA=="/>
         </item>
     </channel>
 </rss>
