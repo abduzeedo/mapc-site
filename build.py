@@ -19,7 +19,7 @@ ADDRESS = "Thornhill Dr, Oakland, California 94611, USA"
 BUY_URL = "https://abdz.gumroad.com/l/mapcpro"
 RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
-VERSION = "1.0.6 Beta"
+VERSION = "1.0.7 Beta"
 
 MOCK = """<div class="stage" role="img" aria-label="Illustration of the MaPC library: a sidebar of stores and a grid of game covers with a Play button">
 <div class="mock">
