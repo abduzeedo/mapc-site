@@ -50,21 +50,5 @@
       .catch(function () { empty(root); });
   });
 
-  // Download count: a file the repo updates every few hours from GitHub's own numbers, so visitors never contact GitHub's API.
-  var MIN_SHOWN = 25; // not shown until it reaches this, so a brand-new count doesn't look sad
-  var dl = document.querySelector("[data-downloads]");
-  if (dl) {
-    fetch("downloads.json", { cache: "no-cache" })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (d) {
-        var n = d && typeof d.downloads === "number" ? d.downloads : 0;
-        if (n >= MIN_SHOWN) {
-          dl.querySelector("[data-downloads-n]").textContent = n.toLocaleString("en-US");
-          dl.hidden = false;
-        }
-      })
-      .catch(function () {});
-  }
-
   document.querySelectorAll("[data-year]").forEach(function (n) { n.textContent = new Date().getFullYear(); });
 })();
