@@ -62,10 +62,6 @@
       "tier": "insert-coin"
     },
     {
-      "name": "Andre Elijah",
-      "tier": "arcade-hero"
-    },
-    {
       "name": "Juan Colilla",
       "tier": "insert-coin"
     },
@@ -83,6 +79,14 @@
     },
     {
       "name": "Bastiaan van Oorde",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Gabriel González Tirado",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Aleksandr Avetisov",
       "tier": "insert-coin"
     }
   ]
