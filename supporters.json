@@ -244,6 +244,18 @@
     {
       "name": "M. C.",
       "tier": "arcade-hero"
+    },
+    {
+      "name": "I. I.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. H. A.",
+      "tier": "high-scorer"
+    },
+    {
+      "name": "S. G.",
+      "tier": "arcade-hero"
     }
   ]
 }
