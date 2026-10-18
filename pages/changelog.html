@@ -3,7 +3,19 @@ description: Release notes for MaPC.
 ---
 <div class="wrap"><article class="doc">
 <h1>What&rsquo;s new</h1>
-<div class="release"><h2>MaPC 1.1.0 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<div class="release"><h2>MaPC 1.1.2 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<ul>
+<li>More reliable first-time Steam setup: incomplete installations download and verify the full client.</li>
+<li>New Repair Steam action in Settings &rsaquo; Stores checks client files while keeping installed games and saves.</li>
+<li>Steam interface repairs keep working after its startup card is hidden, through updates and helper restarts.</li>
+<li>Startup status can recover after failed attempts and follows replacement log files correctly.</li>
+<li>Engine changes, environment resets and app updates check the actual running Windows environments.</li>
+<li>Save restore stops if the safety backup cannot be created, protecting current progress.</li>
+<li>Steam launch arguments are passed through to games; external Steam libraries are monitored for changes.</li>
+<li>Problem reports keep the previous launch attempts and include engine and process exit details.</li>
+</ul></div>
+
+<div class="release"><h2>MaPC 1.1.0 Beta</h2><p class="meta">October 2026</p>
 <ul>
 <li>While Steam starts, MaPC shows what it&rsquo;s doing: checking for updates, downloading one, loading its window or waiting for you to sign in. Steam&rsquo;s own window is often black during those steps. If it takes too long, you can restart Steam or send us its logs.</li>
 <li>Fixed: after a Steam client update, Steam&rsquo;s window could stay black until you restarted it. MaPC now fixes it while Steam starts when you open it from MaPC.</li>
