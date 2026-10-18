@@ -64,6 +64,8 @@ ICONS = {
     "sparkle": '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>',
     "command": '<path d="M9 9V6.5A2.5 2.5 0 1 0 6.5 9H9zm0 0h6m-6 0v6m6-6V6.5A2.5 2.5 0 1 1 17.5 9H15zm0 0v6m0 0h2.5a2.5 2.5 0 1 1-2.5 2.5V15zm0 0H9m0 0v2.5A2.5 2.5 0 1 1 6.5 15H9z"/>',
     "download": '<path d="M12 4v11M7.5 11L12 15.5 16.5 11M5 20h14"/>',
+    "library": '<rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/>',
+    "palette": '<path d="M12 3.5a8.5 8.5 0 1 0 0 17c1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7h2.1a4 4 0 0 0 4-4c0-4-3.8-7.2-8.5-7.2z"/><circle cx="7.6" cy="11.2" r=".8"/><circle cx="10.2" cy="7.4" r=".8"/><circle cx="14.6" cy="7.6" r=".8"/>',
 }
 
 # The MaPC logo (from the owner's mapc.svg).
@@ -78,10 +80,10 @@ NAV = [("features", "Features", "index.html#features", True), ("support", "Suppo
 
 
 SHOTS = ROOT / "assets" / "screens"
-TOUR = [("library", "Your whole library, one place.", "Steam, Epic and GOG side by side, with search and sorting."),
-        ("game", "Game pages with their own colors.", "Each game gets a page tinted by its art, with play time, details and settings."),
-        ("stats", "Playtime stats.", "Hours per week and store, and your most played. A supporter extra."),
-        ("saves", "Settings and save backup.", "Graphics, Retina and more for each game, and one-click save backup to iCloud Drive or any folder. Supporter extras.")]
+TOUR = [("library", "library", "Your whole library, one place.", "Steam, Epic and GOG side by side, with search and sorting."),
+        ("game", "palette", "Game pages with their own colors.", "Each game gets a page tinted by its art, with play time, details and settings."),
+        ("stats", "chart", "Playtime stats.", "Hours per week and store, and your most played. A supporter extra."),
+        ("saves", "backup", "Settings and save backup.", "Graphics, Retina and more for each game, and one-click save backup to iCloud Drive or any folder. Supporter extras.")]
 
 
 def image_size(path):
@@ -126,15 +128,18 @@ def hero_visual():
 
 
 def tour():
-    figs = []
-    for name, title, text in TOUR:
+    """A list of screenshots with a title and a line each. On wide screens tour.js holds the section still and steps through them."""
+    steps = []
+    for name, ico, title, text in TOUR:
         f = shot_file(name)
         if f:
-            figs.append(f'<figure class="shot">{img(f, title)}<figcaption><b>{title}</b> {text}</figcaption></figure>')
-    if not figs:
+            steps.append(f'<div class="tour-step"><div class="tour-text"><h3>{icon(ico)}{title}</h3>'
+                         f'<div class="tour-more"><div><p>{text}</p></div></div></div>{img(f, title)}</div>')
+    if not steps:
         return ""
-    return ('<section id="tour"><p class="eyebrow">A look inside</p><h2>Made for the Mac. <span class="fade">Not a web page in a window.</span></h2>'
-            '<div class="tour">' + "".join(figs) + "</div></section>")
+    return ('<section id="tour"><div class="tour" data-tour><div class="tour-pin"><div class="tour-grid">'
+            '<div class="tour-head"><p class="eyebrow">A look inside</p><h2>Made for the Mac. <span class="fade">Not a web page in a window.</span></h2></div>'
+            + "".join(steps) + "</div></div></div></section>")
 
 
 def icon(name):
@@ -147,7 +152,9 @@ def layout(meta, body, filename):
     robots = f'\n<meta name="robots" content="{html.escape(meta["robots"], quote=True)}">' if meta.get("robots") else ""
     nav = "".join(f'<li class="hide-sm"><a href="{href}">{label}</a></li>' for _, label, href, _ in NAV)
     ld = ""
+    scripts = '<script src="site.js" defer></script>'
     if filename == "index.html":
+        scripts += '\n<script src="tour.js" defer></script>'
         ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication",'
               '"name":"MaPC","operatingSystem":"macOS 15+","applicationCategory":"GameApplication",'
               f'"description":"{desc}","url":"{SITE}/","publisher":{{"@type":"Organization","name":"Steale LLC"}},'
@@ -197,7 +204,7 @@ def layout(meta, body, filename):
 <p>MaPC isn&rsquo;t affiliated with or endorsed by Valve, Epic Games, GOG, Apple or CodeWeavers. Steam, Epic Games, GOG, Apple, Mac, macOS, Metal and CrossOver are trademarks of their owners and are used only to identify what MaPC works with or is built from.</p>
 </div>
 </div></footer>
-<script src="site.js" defer></script>
+{scripts}
 </body>
 </html>
 """

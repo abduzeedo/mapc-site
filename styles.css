@@ -21,6 +21,8 @@
   --red: #b42f2a;
   --rose: #a83a55;
   --wine: #84273c;
+  --shot-shadow: 0 40px 80px -40px rgba(42, 36, 32, .4), 0 12px 24px -12px rgba(42, 36, 32, .18);
+  --glow: .3;
   --radius: 22px;
   --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -46,6 +48,8 @@
     --orange: #e8803c;
     --red: #e0503f;
     --rose: #d0607a;
+    --shot-shadow: 0 50px 100px -40px rgba(0, 0, 0, .7), 0 20px 40px -20px rgba(0, 0, 0, .45);
+    --glow: .55;
   }
 }
 
@@ -90,6 +94,7 @@ img, svg { display: block; max-width: 100%; }
 .btn-ghost { background: var(--soft); color: var(--ink); }
 .btn-ghost:hover { background: var(--line); }
 .btn-sm { height: 38px; padding: 0 18px; font-size: 14px; }
+.btn-note { font-weight: 500; opacity: .62; }
 
 /* Type */
 .eyebrow { font: 600 12px var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--fade); margin: 0 0 18px; }
@@ -100,9 +105,34 @@ h3 { margin: 0; font-size: 1rem; }
 .fade { color: var(--fade); }
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--fade); max-width: 36em; }
 
-/* Hero */
+/* Hero: a short title, the buttons, then what MaPC does and what it needs. */
 .hero { padding: 88px 0 24px; position: relative; }
-.hero h1 + .cta { margin-top: 34px; }
+.hero h1 { font-size: clamp(2.75rem, 7.4vw, 5.75rem); max-width: 11em; line-height: 1; letter-spacing: -0.045em; text-wrap: balance; }
+.hero .eyebrow { margin-bottom: 24px; }
+.hero h1 + .cta { margin-top: 36px; }
+.hero .lead { margin: 30px 0 0; max-width: 30em; text-wrap: pretty; }
+
+/* Behind the hero screenshot, a blurred copy of it: the light of the screen. */
+.hero .stage.shots { position: relative; isolation: isolate; margin-top: 72px; }
+.hero .stage.shots::before {
+  content: ""; position: absolute; z-index: -1; inset: 4% 3% -4%; border-radius: 40px;
+  background: url("assets/screens/home.jpg") center / cover; filter: blur(72px) saturate(1.4); opacity: var(--glow);
+}
+.hero .stage.shots img { border-radius: 14px; border-color: color-mix(in srgb, var(--ink) 14%, transparent); }
+@media (max-width: 640px) {
+  /* On a phone the window runs off the right edge, large enough to read. */
+  .hero .stage.shots { margin-right: calc(50% - 50vw); overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent); mask-image: linear-gradient(90deg, #000 70%, transparent); }
+  .hero .stage.shots img { width: 170%; max-width: none; border-radius: 12px 0 0 12px; }
+}
+
+/* The hero rises in on load. */
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+@keyframes rise-far { from { opacity: 0; transform: translateY(48px) scale(.98); } }
+.hero > * { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
+.hero > h1 { animation-delay: .05s; }
+.hero > .cta { animation-delay: .1s; }
+.hero > .lead, .hero > .fine { animation-delay: .15s; }
+.hero > .stage { animation: rise-far 1.2s .25s cubic-bezier(.2, .7, .2, 1) both; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .fine { font-size: 13.5px; color: var(--fade); margin: 16px 0 0; }
 .fine a { text-decoration-color: color-mix(in srgb, var(--fade) 50%, transparent); }
@@ -254,9 +284,61 @@ footer::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 8px
 
 /* Real screenshots */
 .stage.shots { padding: 0; background: none; border: 0; border-radius: 0; overflow: visible; }
-.stage.shots img, .shot img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 30px 60px -30px rgba(31, 15, 26, .5); }
-.tour { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 28px; margin-top: 52px; }
-@media (max-width: 760px) { .tour { grid-template-columns: 1fr; } }
-.shot { margin: 0; }
-.shot figcaption { margin-top: 14px; font-size: 15.5px; color: var(--fade); max-width: 32em; }
-.shot figcaption b { color: var(--ink); font-weight: 600; }
+.stage.shots img, .tour-step img, .tour-canvas { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shot-shadow); }
+
+/* A look inside: a plain list of screenshots. On wide screens tour.js adds
+   .is-live: the section holds still while it scrolls past. On the left the
+   steps, a compact list level with the bottom of the picture, only the one
+   that is up open; on the right the picture, as large as the screen allows
+   and running a little past its edge, swapped by a shader. */
+.tour-grid { display: grid; gap: 56px; }
+.tour-step { display: grid; gap: 18px; }
+.tour-step img { order: -1; }
+.tour-canvas, .tour-glow { display: none; }
+.tour-text h3 { display: flex; align-items: flex-start; gap: 12px; font-size: 1.2rem; letter-spacing: -0.02em; }
+.tour-text .ico { width: 22px; height: 22px; margin-top: 3px; flex: none; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.tour-more p { margin: 8px 0 0 34px; font-size: 15.5px; color: var(--fade); max-width: 30em; }
+@media (min-width: 900px) {
+  .tour.is-live { --top: 112px; --left: 340px; --gap: 80px; height: calc(100vh - var(--top) + var(--n, 4) * 55vh); }
+  .tour.is-live .tour-pin {
+    position: sticky; top: var(--top); height: calc(100vh - var(--top) - 32px); display: flex; align-items: center;
+    transition: opacity .8s ease, transform 1s cubic-bezier(.2, .7, .2, 1);
+  }
+  .tour.is-live:not(.seen) .tour-pin { opacity: 0; transform: translateY(40px); }
+  /* The heading sits in the first row, which takes whatever height the
+     picture leaves over, so the list ends level with its bottom edge;
+     tour.js puts step k in row k + 2. */
+  .tour.is-live .tour-grid { isolation: isolate; width: 100%; grid-template-columns: var(--left) minmax(0, 1fr); grid-template-rows: 1fr repeat(var(--n, 4), auto); gap: 0 var(--gap); }
+  .tour.is-live .tour-head { grid-column: 1; grid-row: 1; align-self: start; padding-bottom: 40px; }
+  .tour.is-live .tour-head h2 { font-size: clamp(1.9rem, 2.5vw, 2.3rem); text-wrap: balance; }
+  .tour.is-live .tour-head h2 .fade { display: block; }
+  .tour.is-live .tour-step { display: contents; }
+  .tour.is-live .tour-text { grid-column: 1; padding: 13px 0; cursor: pointer; }
+  .tour.is-live .tour-step:last-of-type .tour-text { padding-bottom: 0; }
+  .tour.is-live .tour-text h3 { opacity: .4; transition: opacity .4s ease; }
+  .tour.is-live .tour-text:hover h3 { opacity: .7; }
+  .tour.is-live .tour-step.on .tour-text h3 { opacity: 1; }
+  .tour.is-live .tour-text .ico { stroke: currentColor; transition: stroke .4s ease; }
+  .tour.is-live .tour-step.on .tour-text .ico { stroke: var(--accent); }
+  .tour.is-live .tour-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(.2, .7, .2, 1); }
+  .tour.is-live .tour-more > div { overflow: hidden; min-height: 0; }
+  .tour.is-live .tour-step.on .tour-more { grid-template-rows: 1fr; }
+  .tour.is-live .tour-step img, .tour.is-live .tour-canvas, .tour.is-live .tour-glow {
+    /* --room: from the picture's left edge to the right edge of the screen */
+    --room: calc(100vw - 24px - var(--left) - var(--gap));
+    grid-column: 2; grid-row: 1 / -1; align-self: end; justify-self: start; max-width: none;
+    width: min(calc((100vh - var(--top) - 72px) * var(--ratio, 1.6)), calc(var(--room) * 1.1));
+    border-radius: 16px; opacity: 0; transition: opacity .3s ease;
+  }
+  .tour.is-live .tour-canvas, .tour.is-live .tour-glow { display: block; }
+  .tour.is-live .tour-glow {
+    z-index: -1; aspect-ratio: var(--ratio, 1.6); background-position: center; background-size: cover;
+    filter: blur(72px) saturate(1.4); transition: opacity 1.1s ease;
+  }
+  .tour.is-live .tour-glow.on { opacity: var(--glow); }
+  .tour.is-live .tour-step.shown img, .tour.is-live .tour-canvas.on { opacity: 1; }
+  .tour.is-live .tour-canvas, .tour.is-live.snap .tour-step img { transition: none; }
+}
+@media (min-width: 1128px) {
+  .tour.is-live .tour-step img, .tour.is-live .tour-canvas, .tour.is-live .tour-glow { --room: calc(50vw + 540px - var(--left) - var(--gap)); }
+}
