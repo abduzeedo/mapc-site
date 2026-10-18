@@ -3,7 +3,19 @@ description: Release notes for MaPC.
 ---
 <div class="wrap"><article class="doc">
 <h1>What&rsquo;s new</h1>
-<div class="release"><h2>MaPC 1.0.9 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<div class="release"><h2>MaPC 1.1.0 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<ul>
+<li>While Steam starts, MaPC shows what it&rsquo;s doing: checking for updates, downloading one, loading its window or waiting for you to sign in. Steam&rsquo;s own window is often black during those steps. If it takes too long, you can restart Steam or send us its logs.</li>
+<li>Fixed: after a Steam client update, Steam&rsquo;s window could stay black until you restarted it. MaPC now fixes it while Steam starts when you open it from MaPC.</li>
+<li>Open Steam brings Steam to the front when it&rsquo;s already running, instead of starting it again.</li>
+<li>New: Help &rsaquo; Report a Problem collects your logs into a file you can email us. Your name, your Mac&rsquo;s name, your Steam account and email addresses are removed first.</li>
+<li>New: Help &rsaquo; Activity shows what&rsquo;s running in each store&rsquo;s Windows environment, and lets you stop it.</li>
+<li>Steam has a Refresh button, and finds games in Steam libraries on your Mac&rsquo;s drive or an external drive.</li>
+<li>Fixed: signing out of Epic or GOG, or uninstalling a Steam game, erased its playtime and settings.</li>
+<li>Fixed: &ldquo;Sign in with Google/Apple&rdquo; buttons on the Epic and GOG sign-in pages did nothing, and Epic&rsquo;s sign-in page could stay blank.</li>
+<li>Fixed: loading your Epic library could hang.</li>
+</ul></div>
+<div class="release"><h2>MaPC 1.0.9 Beta</h2><p class="meta">October 2026</p>
 <ul>
 <li>MaPC&rsquo;s game code is now open source: the part that runs games is published under the Apache License 2.0 at <a href="https://github.com/abduzeedo/mapc-engine">github.com/abduzeedo/mapc-engine</a>. Settings &rsaquo; About &rsaquo; Acknowledgements links to it.</li>
 <li>Fixed: the &ldquo;Source Code for Engine Components&rdquo; link in Acknowledgements now opens the engine releases where that source is published.</li>
