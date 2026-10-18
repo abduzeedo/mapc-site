@@ -284,9 +284,61 @@ footer::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 8px
 
 /* Real screenshots */
 .stage.shots { padding: 0; background: none; border: 0; border-radius: 0; overflow: visible; }
-.stage.shots img, .shot img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shot-shadow); }
-.tour { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 28px; margin-top: 52px; }
-@media (max-width: 760px) { .tour { grid-template-columns: 1fr; } }
-.shot { margin: 0; }
-.shot figcaption { margin-top: 14px; font-size: 15.5px; color: var(--fade); max-width: 32em; }
-.shot figcaption b { color: var(--ink); font-weight: 600; }
+.stage.shots img, .tour-step img, .tour-canvas { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shot-shadow); }
+
+/* A look inside: a plain list of screenshots. On wide screens tour.js adds
+   .is-live: the section holds still while it scrolls past. On the left the
+   steps, a compact list level with the bottom of the picture, only the one
+   that is up open; on the right the picture, as large as the screen allows
+   and running a little past its edge, swapped by a shader. */
+.tour-grid { display: grid; gap: 56px; }
+.tour-step { display: grid; gap: 18px; }
+.tour-step img { order: -1; }
+.tour-canvas, .tour-glow { display: none; }
+.tour-text h3 { display: flex; align-items: flex-start; gap: 12px; font-size: 1.2rem; letter-spacing: -0.02em; }
+.tour-text .ico { width: 22px; height: 22px; margin-top: 3px; flex: none; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.tour-more p { margin: 8px 0 0 34px; font-size: 15.5px; color: var(--fade); max-width: 30em; }
+@media (min-width: 900px) {
+  .tour.is-live { --top: 112px; --left: 340px; --gap: 80px; height: calc(100vh - var(--top) + var(--n, 4) * 55vh); }
+  .tour.is-live .tour-pin {
+    position: sticky; top: var(--top); height: calc(100vh - var(--top) - 32px); display: flex; align-items: center;
+    transition: opacity .8s ease, transform 1s cubic-bezier(.2, .7, .2, 1);
+  }
+  .tour.is-live:not(.seen) .tour-pin { opacity: 0; transform: translateY(40px); }
+  /* The heading sits in the first row, which takes whatever height the
+     picture leaves over, so the list ends level with its bottom edge;
+     tour.js puts step k in row k + 2. */
+  .tour.is-live .tour-grid { isolation: isolate; width: 100%; grid-template-columns: var(--left) minmax(0, 1fr); grid-template-rows: 1fr repeat(var(--n, 4), auto); gap: 0 var(--gap); }
+  .tour.is-live .tour-head { grid-column: 1; grid-row: 1; align-self: start; padding-bottom: 40px; }
+  .tour.is-live .tour-head h2 { font-size: clamp(1.9rem, 2.5vw, 2.3rem); text-wrap: balance; }
+  .tour.is-live .tour-head h2 .fade { display: block; }
+  .tour.is-live .tour-step { display: contents; }
+  .tour.is-live .tour-text { grid-column: 1; padding: 13px 0; cursor: pointer; }
+  .tour.is-live .tour-step:last-of-type .tour-text { padding-bottom: 0; }
+  .tour.is-live .tour-text h3 { opacity: .4; transition: opacity .4s ease; }
+  .tour.is-live .tour-text:hover h3 { opacity: .7; }
+  .tour.is-live .tour-step.on .tour-text h3 { opacity: 1; }
+  .tour.is-live .tour-text .ico { stroke: currentColor; transition: stroke .4s ease; }
+  .tour.is-live .tour-step.on .tour-text .ico { stroke: var(--accent); }
+  .tour.is-live .tour-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(.2, .7, .2, 1); }
+  .tour.is-live .tour-more > div { overflow: hidden; min-height: 0; }
+  .tour.is-live .tour-step.on .tour-more { grid-template-rows: 1fr; }
+  .tour.is-live .tour-step img, .tour.is-live .tour-canvas, .tour.is-live .tour-glow {
+    /* --room: from the picture's left edge to the right edge of the screen */
+    --room: calc(100vw - 24px - var(--left) - var(--gap));
+    grid-column: 2; grid-row: 1 / -1; align-self: end; justify-self: start; max-width: none;
+    width: min(calc((100vh - var(--top) - 72px) * var(--ratio, 1.6)), calc(var(--room) * 1.1));
+    border-radius: 16px; opacity: 0; transition: opacity .3s ease;
+  }
+  .tour.is-live .tour-canvas, .tour.is-live .tour-glow { display: block; }
+  .tour.is-live .tour-glow {
+    z-index: -1; aspect-ratio: var(--ratio, 1.6); background-position: center; background-size: cover;
+    filter: blur(72px) saturate(1.4); transition: opacity 1.1s ease;
+  }
+  .tour.is-live .tour-glow.on { opacity: var(--glow); }
+  .tour.is-live .tour-step.shown img, .tour.is-live .tour-canvas.on { opacity: 1; }
+  .tour.is-live .tour-canvas, .tour.is-live.snap .tour-step img { transition: none; }
+}
+@media (min-width: 1128px) {
+  .tour.is-live .tour-step img, .tour.is-live .tour-canvas, .tour.is-live .tour-glow { --room: calc(50vw + 540px - var(--left) - var(--gap)); }
+}
