@@ -160,6 +160,26 @@
     {
       "name": "A. P.",
       "tier": "high-scorer"
+    },
+    {
+      "name": "C. A.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "C. A.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "M. E.",
+      "tier": "high-scorer"
+    },
+    {
+      "name": "J. C.",
+      "tier": "high-scorer"
     }
   ]
 }
