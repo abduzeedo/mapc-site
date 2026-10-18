@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "supporters": [
     {
       "name": "k",
@@ -180,6 +180,70 @@
     {
       "name": "J. C.",
       "tier": "high-scorer"
+    },
+    {
+      "name": "I. E.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. G.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "S. B.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "E. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "N. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "J. D.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "M. Y.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "P. T.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. B.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "K. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. K.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. G.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "R. L.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "P. T.",
+      "tier": "arcade-hero"
+    },
+    {
+      "name": "M. C.",
+      "tier": "arcade-hero"
     }
   ]
 }
