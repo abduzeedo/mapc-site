@@ -30,7 +30,13 @@
 <main id="main">
 <div class="wrap"><article class="doc">
 <h1>What&rsquo;s new</h1>
-<div class="release"><h2>MaPC 1.1.5 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<div class="release"><h2>MaPC 1.1.6 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<ul>
+<li>Fixed: if you installed the DirectX 12 engine 2.0.1, games kept crashing at start on macOS 26 even after updating MaPC. MaPC now notices engines that have been replaced and offers to update them (2.0.1 to 2.0.2, and 1.0.0 to 1.0.1). It asks before downloading anything, moves your Windows environments to the new engine, and keeps the old one until the new one works.</li>
+<li>Check Last Launch now says when a game stopped because its engine has been replaced, with a button to update it.</li>
+</ul></div>
+
+<div class="release"><h2>MaPC 1.1.5 Beta</h2><p class="meta">October 2026</p>
 <ul>
 <li>Fixed: after a game switched Steam from the DirectX 12 engine (D3DMetal) back to DXVK, Steam could fail to start with a &ldquo;dxgi.dll&rdquo; error. MaPC now puts the right graphics files back, and repairs bottles where they went missing.</li>
 <li>Fixed: Steam no longer asks you to sign in again every time a game switches engines. You may need to sign in to Steam (or the Rockstar Games Launcher) one more time after updating if you last signed in on the DirectX 12 engine; after that, sign-ins carry over.</li>
