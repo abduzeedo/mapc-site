@@ -316,6 +316,38 @@
     {
       "name": "L. B.",
       "tier": "arcade-hero"
+    },
+    {
+      "name": "D. D.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "P. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Y. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "P",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "W. J.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "M. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "S. B.",
+      "tier": "arcade-hero"
     }
   ]
 }
