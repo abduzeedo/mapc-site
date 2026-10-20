@@ -3,7 +3,14 @@ description: Release notes for MaPC.
 ---
 <div class="wrap"><article class="doc">
 <h1>What&rsquo;s new</h1>
-<div class="release"><h2>MaPC 1.1.6 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<div class="release"><h2>MaPC 1.1.7 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<ul>
+<li>Fixed: a game set to play without Retina mode (or with Command as Control off) could still start with the other setting, because MaPC trusted its own memory of what it had set. It now checks the Windows environment's actual settings before every launch and corrects them.</li>
+<li>Fixed: installing a MaPC update could wait forever at &ldquo;Ready to Install&rdquo; when Wine had left a background program running after a crash. MaPC now recognises those left-over programs and closes them, and only waits for games and launchers that are really running.</li>
+<li>While an update waits, MaPC now says what it is waiting for (for example &ldquo;Waiting for Steam to close&hellip;&rdquo;), with a choice to quit and install now or later.</li>
+</ul></div>
+
+<div class="release"><h2>MaPC 1.1.6 Beta</h2><p class="meta">October 2026</p>
 <ul>
 <li>Fixed: if you installed the DirectX 12 engine 2.0.1, games kept crashing at start on macOS 26 even after updating MaPC. MaPC now notices engines that have been replaced and offers to update them (2.0.1 to 2.0.2, and 1.0.0 to 1.0.1). It asks before downloading anything, moves your Windows environments to the new engine, and keeps the old one until the new one works.</li>
 <li>Check Last Launch now says when a game stopped because its engine has been replaced, with a button to update it.</li>
