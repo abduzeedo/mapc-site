@@ -3,7 +3,21 @@ description: Release notes for MaPC.
 ---
 <div class="wrap"><article class="doc">
 <h1>What&rsquo;s new</h1>
-<div class="release"><h2>MaPC 1.1.3 Beta <span class="tag">LATEST</span></h2><p class="meta">October 18, 2026</p>
+<div class="release"><h2>MaPC 1.1.4 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<ul>
+<li>Fixed: on macOS 26, the DirectX 12 engine closed as soon as it started. The new engine 2.0.2 fixes it. If you use DirectX 12 games, open Settings &rsaquo; Engine and install it.</li>
+<li>New: 32-bit DirectX 10 and 11 games (Cuphead, for example) run with DXMT in the extended engine. MaPC tells you on the game&rsquo;s page when a game needs it, with a download button, and picks it automatically.</li>
+<li>Fixed: WineD3D no longer loads DXVK by mistake, and graphics files from one game no longer affect the next (the Rockstar Launcher could crash).</li>
+<li>New: MaPC Help (Help menu, &#8984;?) with getting started, what MaPC needs, which games work, and common problems.</li>
+<li>New: Check Last Launch on a game&rsquo;s page reads its last log and names known problems, with a button for the fix. On macOS 26 and later, Apple Intelligence can explain them in plain words, on your Mac.</li>
+<li>Steam: when a game needs different graphics than Steam started with, MaPC offers to restart Steam (or does it without asking, if you choose).</li>
+<li>Steam&rsquo;s startup card appears as soon as you press Play, lists each step, and is easier to read.</li>
+<li>Game videos: Settings &rsaquo; Engine shows whether GStreamer is installed and where to get it. MaPC doesn&rsquo;t include it.</li>
+<li>Updated license agreement and privacy page (Apple Intelligence explanations, GStreamer). You&rsquo;ll be asked to accept the agreement again.</li>
+<li>New engine 1.0.1: the same as 1.0.0 for games, smaller (an unused web engine was removed), and with complete license notices.</li>
+</ul></div>
+
+<div class="release"><h2>MaPC 1.1.3 Beta</h2><p class="meta">October 18, 2026</p>
 <ul>
 <li>Fixed: opening Steam before a game could leave DirectX 12 games without the D3DMetal graphics setup they need. Steam now starts with a graphics backend provided by its engine.</li>
 <li>Tested opening Steam first and then launching Red Dead Redemption 2 through the running client, reaching a responsive game menu.</li>

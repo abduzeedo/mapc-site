@@ -13,17 +13,18 @@ description: MaPC's open-source game engine code, the open-source software it ru
 <ul>
 <li><b>Wine</b> &mdash; LGPL 2.1 or later. The DirectX 12 engine is built from CodeWeavers&rsquo; published CrossOver source (also LGPL).</li>
 <li><b>DXVK</b> &mdash; zlib license.</li>
+<li><b>DXMT</b> (32-bit DirectX 10/11 on Metal, in the extended engine) &mdash; MIT license (version 0.80).</li>
 <li><b>MoltenVK</b> &mdash; Apache 2.0.</li>
-<li><b>Wine Mono</b> &mdash; a mix of MIT, LGPL and GPL components.</li>
+<li><b>Wine Mono</b> &mdash; a mix of MIT, LGPL, GPL (with an exception), MS-PL and zlib components.</li>
 <li><b>Legendary</b> (Epic Games) and <b>gogdl</b> (GOG) &mdash; GPL 3.0. They run as separate programs, and MaPC doesn&rsquo;t include or change their code.</li>
 </ul>
-<p>The full list, with licenses, is in the app under Settings &rsaquo; About &rsaquo; Acknowledgements. Each engine carries the full license text of everything inside it, with a list of components in <code>licenses/THIRD-PARTY-NOTICES.md</code>. Engines don&rsquo;t contain any software from Apple.</p>
+<p>The full list, with licenses, is in the app under Settings &rsaquo; About &rsaquo; Acknowledgements. Each engine carries the full license text of everything inside it, with a list of components in <code>licenses/THIRD-PARTY-NOTICES.md</code>. Engines don&rsquo;t contain any software from Apple, and no GStreamer or video codecs: for game videos you can install GStreamer yourself.</p>
 
 <h2>Source code</h2>
 <p>Every engine is published on the <a href="{{RELEASES}}">releases page</a> with its sources:</p>
 <ul>
 <li><b>DirectX 12 engine (2.x)</b>: Wine built by us, unmodified, from CodeWeavers&rsquo; CrossOver 26.3.0 source. The exact source tarball and our build script are attached to the engine&rsquo;s release, and the build script is also inside the engine (<code>licenses/build</code>).</li>
-<li><b>Main engine (1.x)</b>: Wine Staging 11.18 and DXVK as built by Gcenx; the release links to their exact sources.</li>
+<li><b>Main engine (1.x)</b>: Wine Staging 11.18, Wine Mono 11.3.0 and DXVK as built by Gcenx. The exact sources are attached to the engine&rsquo;s release: Wine 11.18, the Wine Staging patches, Gcenx&rsquo;s build recipe and extra patch, Wine Mono&rsquo;s source and DXVK&rsquo;s source.</li>
 <li><b>Runtime libraries</b> (GnuTLS, FreeType, SDL2, MoltenVK and others) in both engines come from Gcenx&rsquo;s Wine 11.18 builds.</li>
 </ul>
 <p>You may modify and replace these components. For at least three years after we last distribute an engine, anyone who has it can ask for the complete corresponding source of any LGPL or GPL component in it, for no more than the cost of providing it: email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>

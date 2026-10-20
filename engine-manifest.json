@@ -1,23 +1,24 @@
 {
   "engines": [
     {
-      "version": "1.0.0",
-      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-1.0.0/mapc-engine-1.0.0.tar.xz",
-      "sha256": "35c631ed67dae53ee4792a8c7844c1af67df3113a5b0e2d7844a05ffdbcb52bc",
-      "size": 220746080,
+      "version": "1.0.1",
+      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-1.0.1/mapc-engine-1.0.1.tar.xz",
+      "sha256": "f46ead65cb2ed6a381c8093c60312365cafe42e9f84ec280647821516ca9517b",
+      "size": 137562868,
       "minAppVersion": "0.1",
       "backends": [
         "dxvk"
       ]
     },
     {
-      "version": "2.0.1",
-      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-2.0.1/mapc-engine-2.0.1.tar.xz",
-      "sha256": "ec9db3c00f24b2ff3dd4923ede21bcc77c7080f94a2b7fee70c168706c68f0dc",
-      "size": 287158872,
+      "version": "2.0.2",
+      "url": "https://github.com/abduzeedo/mapc-site/releases/download/engine-2.0.2/mapc-engine-2.0.2.tar.xz",
+      "sha256": "e04aa8531d6e29a62f9420686fb7911373750ceef797022a7f09f9b485a7463f",
+      "size": 299958584,
       "minAppVersion": "1.0.1",
       "backends": [
-        "d3dMetal"
+        "d3dMetal",
+        "dxmt"
       ]
     }
   ],
