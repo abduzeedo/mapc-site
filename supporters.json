@@ -364,6 +364,14 @@
     {
       "name": "V. P.",
       "tier": "arcade-hero"
+    },
+    {
+      "name": "P. R.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "M. C.",
+      "tier": "insert-coin"
     }
   ]
 }
