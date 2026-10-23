@@ -30,7 +30,20 @@
 <main id="main">
 <div class="wrap"><article class="doc">
 <h1>What&rsquo;s new</h1>
-<div class="release"><h2>MaPC 1.1.7 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<div class="release"><h2>MaPC 1.1.8 Beta <span class="tag">LATEST</span></h2><p class="meta">October 2026</p>
+<ul>
+<li>Fixed: Mafia II: Definitive Edition (Epic) didn&rsquo;t open. Its launcher needs .NET, which MaPC now leaves on. When another game needs .NET, Check Last Launch offers <strong>Install .NET</strong>.</li>
+<li>New: an Epic game that needs an update before it can start offers to install it (seen with Alan Wake 2).</li>
+<li>New: games can ask for microphone access for voice chat.</li>
+<li>Fixed: Steam restarted on the wrong engine when another engine was still running. Opening Steam now also resets its Retina and Command-key settings.</li>
+<li>Fixed: logs could grow to several gigabytes. They&rsquo;re now much smaller, finished logs are removed after a day, and Settings has <strong>Clear Logs</strong>.</li>
+<li>Check Last Launch now reads a Steam game&rsquo;s own output, and problem reports include more of the logs, including Rockstar launcher logs.</li>
+<li><strong>Copy for AI</strong> puts a private summary of a failed launch on the clipboard for your own AI assistant. MaPC sends nothing. It replaces the Apple Intelligence explanation, and the EULA and privacy policy are updated to match.</li>
+<li>If engine 2.0.1 crashes at start, MaPC offers the update to 2.0.2.</li>
+<li>GTA V: anti-cheat is noted as blocking GTA Online only.</li>
+</ul></div>
+
+<div class="release"><h2>MaPC 1.1.7 Beta</h2><p class="meta">October 2026</p>
 <ul>
 <li>Fixed: a game set to play without Retina mode (or with Command as Control off) could still start with the other setting, because MaPC trusted its own memory of what it had set. It now checks the Windows environment's actual settings before every launch and corrects them.</li>
 <li>Fixed: installing a MaPC update could wait forever at &ldquo;Ready to Install&rdquo; when Wine had left a background program running after a crash. MaPC now recognises those left-over programs and closes them, and only waits for games and launchers that are really running.</li>
