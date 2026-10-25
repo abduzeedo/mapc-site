@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-25",
   "supporters": [
     {
       "name": "k",
@@ -448,6 +448,58 @@
     {
       "name": "E. B. C.",
       "tier": "insert-coin"
+    },
+    {
+      "name": "D",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "L. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "P. W.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "Y. C. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "J. D. B. O.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "S. B.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "C. W. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "L",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "R. L. C.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "C. G.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "I. B.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. P.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "G. N.",
+      "tier": "high-scorer"
     }
   ]
 }
