@@ -21,7 +21,7 @@ RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
 # MacadeKit, the open-source part of MaPC that runs the games (Apache 2.0).
 SOURCE_URL = "https://github.com/abduzeedo/mapc-engine"
-VERSION = "1.1.14 Beta"
+VERSION = "1.1.15 Beta"
 
 MOCK = """<div class="stage" role="img" aria-label="Illustration of the MaPC library: a sidebar of stores and a grid of game covers with a Play button">
 <div class="mock">
