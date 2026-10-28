@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-27",
   "supporters": [
     {
       "name": "k",
@@ -500,6 +500,26 @@
     {
       "name": "G. N.",
       "tier": "high-scorer"
+    },
+    {
+      "name": "D. V.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "B. A.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "B. M.",
+      "tier": "high-scorer"
+    },
+    {
+      "name": "C",
+      "tier": "arcade-hero"
+    },
+    {
+      "name": "A. P.",
+      "tier": "arcade-hero"
     }
   ]
 }
