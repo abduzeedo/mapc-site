@@ -520,6 +520,38 @@
     {
       "name": "A. P.",
       "tier": "arcade-hero"
+    },
+    {
+      "name": "A. L.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "N. P.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "J. Z. B.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "S. A.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "D. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "K. J.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "S. H.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. S. S.",
+      "tier": "insert-coin"
     }
   ]
 }
