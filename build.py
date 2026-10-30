@@ -21,7 +21,7 @@ RELEASES = "https://github.com/abduzeedo/mapc-site/releases"
 DOWNLOAD_URL = RELEASES + "/latest/download/MaPC.dmg"
 # MacadeKit, the open-source part of MaPC that runs the games (Apache 2.0).
 SOURCE_URL = "https://github.com/abduzeedo/mapc-engine"
-VERSION = "1.1.16 Beta"
+VERSION = "1.1.17 Beta"
 
 MOCK = """<div class="stage" role="img" aria-label="Illustration of the MaPC library: a sidebar of stores and a grid of game covers with a Play button">
 <div class="mock">
@@ -29,7 +29,7 @@ MOCK = """<div class="stage" role="img" aria-label="Illustration of the MaPC lib
 <div class="mock-body">
 <div class="mock-side">
 <span class="on">Home</span><span>All Games</span><span>Installed</span>
-<b>Stores</b><span>Steam</span><span>Epic Games</span><span>GOG</span>
+<b>Stores</b><span>Steam</span><span>Epic Games</span><span>GOG</span><span>Amazon Games</span>
 <b>Activity</b><span>Downloads</span><span>Playtime</span>
 </div>
 <div class="mock-main">
@@ -78,7 +78,7 @@ NAV = [("features", "Features", "index.html#features", True), ("support", "Suppo
 
 
 SHOTS = ROOT / "assets" / "screens"
-TOUR = [("library", "Your whole library, one place.", "Steam, Epic and GOG side by side, with search and sorting."),
+TOUR = [("library", "Your whole library, one place.", "Steam, Epic, GOG and Amazon side by side, with search and sorting."),
         ("game", "Game pages with their own colors.", "Each game gets a page tinted by its art, with play time, details and settings."),
         ("stats", "Playtime stats.", "Hours per week and store, and your most played. A supporter extra."),
         ("saves", "Settings and save backup.", "Graphics, Retina and more for each game, and one-click save backup to iCloud Drive or any folder. Supporter extras.")]
@@ -194,7 +194,7 @@ def layout(meta, body, filename):
 </div>
 <div class="legal">
 <p>&copy; <span data-year>2026</span> Steale LLC. All rights reserved.</p>
-<p>MaPC isn&rsquo;t affiliated with or endorsed by Valve, Epic Games, GOG, Apple, CodeWeavers, Microsoft or NVIDIA. Steam, Epic Games, GOG, Apple, Mac, macOS, Metal, CrossOver, Microsoft, Windows, DirectX, Direct3D, NVIDIA and DLSS are trademarks of their owners and are used only to identify what MaPC works with or is built from.</p>
+<p>MaPC isn&rsquo;t affiliated with or endorsed by Valve, Epic Games, GOG, Amazon, Apple, CodeWeavers, Microsoft or NVIDIA. Steam, Epic Games, GOG, Amazon Games, Apple, Mac, macOS, Metal, CrossOver, Microsoft, Windows, DirectX, Direct3D, NVIDIA and DLSS are trademarks of their owners and are used only to identify what MaPC works with or is built from.</p>
 </div>
 </div></footer>
 <script src="site.js" defer></script>
