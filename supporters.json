@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "supporters": [
     {
       "name": "k",
@@ -604,6 +604,34 @@
     {
       "name": "E. C.",
       "tier": "high-scorer"
+    },
+    {
+      "name": "M. T.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "J. A.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "K. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "K. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "S",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "D. G.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "M. U.",
+      "tier": "insert-coin"
     }
   ]
 }
