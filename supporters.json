@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "supporters": [
     {
       "name": "k",
@@ -631,6 +631,26 @@
     },
     {
       "name": "M. U.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "D. R.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "G. C.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "L. T.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. R.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "N. I.",
       "tier": "insert-coin"
     }
   ]
