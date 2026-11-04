@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "supporters": [
     {
       "name": "k",
@@ -652,6 +652,26 @@
     {
       "name": "N. I.",
       "tier": "insert-coin"
+    },
+    {
+      "name": "T. G.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "M. S.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "J. G.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "L. K. P.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "L. C.",
+      "tier": "arcade-hero"
     }
   ]
 }
