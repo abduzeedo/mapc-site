@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "supporters": [
     {
       "name": "k",
@@ -875,6 +875,58 @@
     },
     {
       "name": "A. G.",
+      "tier": "arcade-hero"
+    },
+    {
+      "name": "V.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "D. L.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "S. B.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. K.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "D. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "G. P.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. K.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "I. Z.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. C.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "K. K.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. A. C.",
+      "tier": "arcade-hero"
+    },
+    {
+      "name": "A. S.",
       "tier": "arcade-hero"
     }
   ]
