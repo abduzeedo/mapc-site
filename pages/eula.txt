@@ -31,8 +31,8 @@ We don't collect personal data or usage data through MaPC. Other companies do se
 6. UPDATES
 MaPC may download and install updated versions of itself, as well as updated engines, tools and compatibility settings. We may change or stop offering features, engines or updates.
 
-7. FEES AND REFUNDS
-Prices and refund terms are those shown where you bought MaPC and on https://mapc.games/terms.html.
+7. FEES
+Prices are those shown where you bought MaPC and on https://mapc.games/terms.html.
 
 8. TERMINATION
 This license ends automatically if you break this agreement. When it ends, stop using MaPC and delete it. Sections 3, 4, 9, 10 and 11 survive.
