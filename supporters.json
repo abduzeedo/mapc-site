@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-28",
   "supporters": [
     {
       "name": "k",
@@ -1004,6 +1004,34 @@
     {
       "name": "A. M.",
       "tier": "high-scorer"
+    },
+    {
+      "name": "botdf",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "H. M.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "H. O.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "P. A.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. R.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "A. P.",
+      "tier": "insert-coin"
+    },
+    {
+      "name": "H. L.",
+      "tier": "arcade-hero"
     }
   ]
 }
